@@ -62,8 +62,8 @@ Pour pouvoir réaliser un « npm install », ajouter cette configuration dans vo
 
 ```bash
 strict-ssl=false
-http-proxy=http://localhost:8081
-https-proxy=http://localhost:8081
+http-proxy=http://localhost:5051
+https-proxy=http://localhost:5051
 ```
 
 ## CMD
@@ -71,8 +71,8 @@ https-proxy=http://localhost:8081
 Lorsque vous avez des problèmes de proxy via la ligne de commande CMD. Cela va mettre à jour les variables proxy uniquement sur votre session CMD courante.
 
 ```bash
-set http_proxy=http://localhost:8081
-set https_proxy=http://localhost:8081
+set http_proxy=http://localhost:5051
+set https_proxy=http://localhost:5051
 ```
 
 ![PX](./cmd.png)
@@ -81,5 +81,5 @@ set https_proxy=http://localhost:8081
 ## Python et PIP
 
 ```bash
-pip install --proxy=http://localhost:8081
+pip install -r requirements.txt --proxy=http://localhost:5051
 ```
