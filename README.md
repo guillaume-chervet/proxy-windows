@@ -22,7 +22,7 @@ http://localhost:5051
 ## Docker
 
 Pour docker configurer le proxy en utiliser l’adresse : 
-- host.docker.internal :5051
+- host.docker.internal:5051
 
 ![PX](./docker.png)
 
