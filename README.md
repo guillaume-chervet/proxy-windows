@@ -42,7 +42,9 @@ docker-compose build --build-arg https_proxy=http://host.docker.internal:5051 --
 ## GIT et github
 
 Pour accéder à github ajouter cette configuration dans votre fichier .gitconfig.
-C:\Users\YOUUSERNAME\\.gitconfig
+« C:\Users\YOUUSERNAME\.gitconfig »
+ou
+« %UserProfile%\.gitconfig »
 
 ```bash
 [http "https://github.com"]
@@ -58,7 +60,7 @@ C:\Users\YOUUSERNAME\\.gitconfig
 
 Pour pouvoir réaliser un « npm install », ajouter cette configuration dans votre fichier . npmrc.
 
-« C:\Users\YOUUSERNAME\\.npmrc »
+« C:\Users\YOUUSERNAME\.npmrc »
 
 ```bash
 strict-ssl=false
@@ -82,4 +84,21 @@ set https_proxy=http://localhost:5051
 
 ```bash
 pip install -r requirements.txt --proxy=http://localhost:5051
+```
+
+## Python et Conda
+
+Pour que conda accède à internet ajouter cette configuration dans votre fichier .condarc.
+« C:\Users\YOUUSERNAME\.condarc »
+ou
+« %UserProfile%\.condarc »
+
+```bash
+channels:
+- defaults
+proxy_servers:
+    http: http://localhost:5051
+    https: http://localhost:5051
+#Optionally configure the following to skip problems relating to SSL #certificate validate. NOTE: THIS IS NOT SECURE.
+#ssl_verify: false
 ```
